@@ -42,6 +42,12 @@ INSTALLED_APPS = [
     #my_app
     'home.apps.HomeConfig',
     'account.apps.AccountConfig',
+    'blog.apps.BlogConfig',
+
+
+    'django_cleanup.apps.CleanupConfig',
+    'django_render_partial',
+    'django_social_share',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +127,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
